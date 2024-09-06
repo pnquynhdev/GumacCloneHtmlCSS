@@ -1,0 +1,38 @@
+/* Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1em 1.5em 0 1.5em;
+}
+
+/* Logo */
+.header-logo {
+
+}
+
+.header-logo-image {
+  max-width: 100%;
+  width: 200px;
+  height: 50px;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-link{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.nav-link li a{
+    text-decoration: none;
+}
