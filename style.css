@@ -1,38 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
 /* Resets */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: "Unna", serif;
+  background: #fff;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
 }
 
 /* Navbar */
 nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin: 1em 1.5em 0 1.5em;
+  padding: 15px 50px 5px 50px;
+  /* background-color: antiquewhite; */
+  background-image: url("./images/silkFabric.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 /* Logo */
-.header-logo {
-
-}
-
 .header-logo-image {
   max-width: 100%;
   width: 200px;
   height: 50px;
 }
-.nav-container {
+
+.search-box {
   display: flex;
-  justify-content: space-between;
-}
-.nav-link{
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
+  padding-left: 400px;
+  padding-right: 50px;
+  align-items: center;
 }
 
-.nav-link li a{
-    text-decoration: none;
+.nav-links-list {
+  display: flex;
+}
+
+.nav-links {
+  display: flex;
+  column-gap: 50px;
+  align-items: center;
+}
+
+#user-icon {
+  padding: 10px;
 }

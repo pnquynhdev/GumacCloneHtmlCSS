@@ -16,29 +16,37 @@
           alt="header_logo"
         />
       </div>
-      <div class="nav-container">
-        <div class="search-box">
-          <input
-            class="search-input"
-            type="text"
-            placeholder="New Collection"
+      <div class="search-box">
+        <input
+          class="search-input"
+          type="text"
+          placeholder="Search product"
+        />
+        <button class="btn btn-search">
+          <img
+            src="./images/ic_search_black.ed7a61dc0e71c14c2820.svg"
+            alt="search-icon"
           />
-          <button class="btn btn-search"><img src="./images/ic_search_black.ed7a61dc0e71c14c2820.svg" alt="search-icon"></button>
-        </div>
-        
-          <ul class="nav-link">
-            <li><a href="/collection">Collection</a></li>
-            <li><a href="/product">Product</a></li>
-            <li><a href="/new">New</a></li>
-            <li>
-              <a href="/client"
-                ><img
-                  src="/images/ic_user_black.248b81780a1aca220688.svg"
-                  alt="user-icon"
-              /></a>
-            </li>
-          </ul>
-        </div>
+        </button>
+      </div>
+
+      <div class="nav-links-list">
+        <ul class="nav-links">
+          <li class="nav-link-item">
+            <a class="nav-link" href="/collection">Collection</a>
+          </li>
+          <li class="nav-link-item">
+            <a class="nav-link" href="/product">Product</a>
+          </li>
+          <li class="nav-link-item"><a class="nav-link" href="/new">New</a></li>
+          <li class="nav-link-item" id="user-icon">
+            <a class="nav-link" href="/client"
+              ><img
+                src="/images/ic_user_black.248b81780a1aca220688.svg"
+                alt="user-icon"
+            /></a>
+          </li>
+        </ul>
       </div>
     </nav>
   </body>
