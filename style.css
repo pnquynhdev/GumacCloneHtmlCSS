@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
 
 /* Resets */
 * {
@@ -10,7 +10,8 @@
 }
 
 body {
-  font-family: "Unna", serif;
+  font-family: "Josefin Sans", sans-serif;
+  font-style: normal;
   background: #fff;
   position: relative;
   width: 100vw;
@@ -19,31 +20,35 @@ body {
 
 /* Navbar */
 nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 50px 5px 50px;
-  /* background-color: antiquewhite; */
   background-image: url("./images/silkFabric.jpg");
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position-y: center;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1); /* revise */
+  height: 70px;
+}
+
+.nav-container {
+  display: flex;
+  padding: 0 50px 0 50px;
+  margin: 0 200px 0 200px;
 }
 
 /* Logo */
+.header-logo-link{
+  
+}
+
 .header-logo-image {
   max-width: 100%;
-  width: 200px;
-  height: 50px;
+  height: 74px;
 }
 
 .search-box {
   display: flex;
-  padding-left: 400px;
+  padding-left: 50%;
   padding-right: 50px;
   align-items: center;
-}
-
-.nav-links-list {
-  display: flex;
 }
 
 .nav-links {
@@ -52,6 +57,19 @@ nav {
   align-items: center;
 }
 
+.nav-link-item:last-child:hover {
+  background-color: #f0f0f0;/*change?*/
+}
+
+.nav-link:hover {
+  color: brown;/*change?*/
+}
+
+.nav-link {
+  color: black; /*change???*/
+  font-size: large;
+  font-weight: 400;
+}
 #user-icon {
-  padding: 10px;
+  padding: 5px;
 }
