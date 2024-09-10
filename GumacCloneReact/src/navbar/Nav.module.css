@@ -1,1 +1,27 @@
 @import "../vars.css";
+nav {
+  padding: 1rem 2.5rem;
+  background-image: url("../../assets/navbar/silkFabric.png"); /* base */
+  background-size: cover; /* base */
+  background-repeat: no-repeat; /* base */
+  background-position: center; /* base */
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1); /* revise */
+  background-color: var(--color-bg);
+}
+
+.navbar {
+  display: flex; /* base */
+  align-items: center; /* base */
+  margin: 0 6.5em 0 6.5em; /* base */
+  justify-content: space-between; /* base */
+  max-height: 60px; /* base */
+  width: 100%;
+}
+
+.logo {
+
+  height: 100%; 
+}
+.logo img {
+  height: 10px;
+}

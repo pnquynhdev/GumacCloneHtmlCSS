@@ -1,7 +1,7 @@
 @import "./vars.css";
 
 .App {
-  width: 100vw; /* base */
-  height: 100vh; /* base */
+  width: 100%; /* base */
+  height: 100%; /* base */
   background-color: var(--color-bg);
 }

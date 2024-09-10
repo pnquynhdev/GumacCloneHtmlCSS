@@ -5,13 +5,18 @@
   padding: 0; /* base */
   box-sizing: border-box; /* base */
   font-family: "Josefin Sans", sans-serif; /* base */
+  position: relative;
 }
 
-html{
-    scroll-behavior: smooth; /* base */
+html {
+  scroll-behavior: smooth; /* base */
 }
 
 a {
   text-decoration: none; /* base */
+  color: var(--color-text);
+}
+
+li {
   list-style: none; /* base */
 }
