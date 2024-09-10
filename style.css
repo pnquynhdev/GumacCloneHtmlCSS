@@ -15,16 +15,18 @@ body {
   background: #fff;
   position: relative;
   min-height: 100vh; /* base */
+  background-color: antiquewhite;
 }
 
-/* Navbar */
+/* Navbar Desktop*/
 nav {
-  background-image: url("./images/silkFabric.jpg"); /* keep */
+  background-image: url("./images/silkFabric.png"); /* keep */
   background-size: cover; /* keep */
   background-repeat: no-repeat; /* keep */
   background-position: center; /* keep */
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1); /* revise */
   padding: 1em 2.5em; /* keep */
+  background-color: #fff;
 }
 
 .nav-container {
@@ -45,14 +47,15 @@ nav {
   width: 100%; /* keep */
 }
 
+/* Search box */
 .search-box {
   display: flex; /* keep */
   height: 100%; /* keep */
   align-items: center;
-  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
 }
 
-.search-input{
+.search-input {
   background: transparent;
   border: none;
   outline: none;
@@ -61,46 +64,47 @@ nav {
   transition: 0.8s;
   color: black;
   font-family: "Josefin Sans", sans-serif; /* keep */
-   padding:1em;
+  padding: 1em;
 }
 
-::placeholder{
+::placeholder {
   color: black;
   font-family: "Josefin Sans", sans-serif; /* keep */
 }
 
-.btn-search{
+.btn-search {
   border: 0;
   padding: 0 0.5em 0 0.5em;
   height: 100%;
-  background-color: silver;
+  background-color: #e3e2eb;
   cursor: pointer;
   transition: all 0.3s ease 0s; /*keep*/
 }
 
-.btn-search img{
+.btn-search img {
   width: 1.5em;
 }
 
-.btn-search:hover{
-  background-color: #e3e2eb;
-}
-
-.btn-search:active{
+.btn-search:hover {
   background-color: silver;
 }
 
+.btn-search:active {
+  background-color: #e3e2eb;
+}
+
+/* Link items */
 .nav-links {
   display: flex; /* keep */
   align-items: center; /* keep */
-  column-gap: 2em; /* keep */
+  /* column-gap: 2em; keep */
   height: 100%;
 }
 
 .nav-link-item:last-child:hover {
   background-color: #f0f0f0; /*change?*/
 }
-.nav-link{
+.nav-link {
   transition: all 0.3s ease 0s; /*keep*/
 }
 
@@ -112,7 +116,32 @@ nav {
   color: black; /*change???*/
   font-size: large;
   font-weight: 400;
+  padding: 0 1em;
 }
 #user-icon {
   padding: 0 0.5em 0 0.5em;
+}
+
+/* Navbar Mobile */
+.dropdown-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 20em;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.37);
+  background-image: url("./images/silkFabric.png"); /* keep */
+  background-size: cover; /* keep */
+  background-repeat: no-repeat; /* keep */
+  background-position: center; /* keep */
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.dropdown-menu li a{
+
 }
