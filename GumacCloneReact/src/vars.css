@@ -1,12 +1,12 @@
 :root {
-    /* Colors */
-    --color-text: #000;
-    --color-primary: #576cbc;
-    --color-secondary: #19376d;
-    --color-dark: #0b2447;
-    --color-bg: #fff;
-  
-    /* Fonts */
-    
-  }
-  
+  /* Colors */
+  --color-text: #000;
+  --color-primary: #silver;
+  --color-secondary: #e3e2eb;
+  --color-dark: #0b2447;
+  --color-bg: #fff;
+  --color-link-hover: brown;
+  --color-link-active: #ca8d8d;
+  --color-bg-dropdown: rgba(222, 223, 0, 0.1);
+  /* Fonts */
+}
