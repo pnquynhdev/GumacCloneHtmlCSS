@@ -36,8 +36,7 @@ nav {
 /* Search box */
 .search_box {
   display: flex; /* keep */
-  height: 2.15rem; /* keep */
-  align-items: center;
+  height: 100%;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
   margin-right: 1rem;
 }
@@ -115,28 +114,38 @@ nav {
 .toggle_btn {
   cursor: pointer;
   height: 100%;
+  margin-top: 0.2rem;
   display: none;
 }
 
 .toggle_btn img {
   height: 1.5rem;
+  width: 1.5rem;
 }
 
 /* DROPDOWN MENU */
 .dropdown_menu {
   display: none;
-  display: flex;
   flex-direction: column;
   row-gap: 2.5rem;
   justify-content: center;
   position: absolute;
   right: 2.5rem;
-  top: 4rem;
+  top: 5rem;
   width: 15rem;
   padding: 1.5rem 0;
-  background-color: var(--color-bg-dropdown);
+  background-color: var(--color-bg);
   overflow: hidden;
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background-image: url("../../assets/navbar/silkFabric.png"); /* base */
+  background-size: cover; /* base */
+  background-repeat: no-repeat; /* base */
+  background-position: center; /* base */
+  box-shadow: -10px 5px 10px rgba(0, 0, 0, 0.1); /* revise */
+}
+
+.dropdown_menu_close {
+  display: none;
 }
 .dropdown_searchbox {
   margin: 0 1rem;
@@ -184,23 +193,25 @@ nav {
   height: 1.25rem;
 }
 
-.dropdown_menu li {
+.dropdown_links {
   display: flex;
-  justify-content: center;
-  transition: all 0.3s ease 0s; /* keep */
+  flex-direction: column;
+  row-gap: 2rem;
+  align-items: center;
 }
 
-.dropdown_menu li a {
+.dropdown_links li a {
   color: var(--color-text);
   font-size: 1.25rem;
   font-weight: 500;
+  transition: all 0.3s ease 0s; /* keep */
 }
 
-.dropdown_menu li a:hover {
+.dropdown_links li a:hover {
   color: var(--color-link-hover);
 }
 
-.dropdown_menu li a:active {
+.dropdown_links li a:active {
   color: var(--color-link-active);
 }
 /* RESPONSIVE */
@@ -211,10 +222,25 @@ nav {
 }
 
 @media screen and (max-width: 992px) {
-  .sidebar .search_box, .links {
+  .sidebar .search_box,
+  .links {
     display: none;
   }
+  .client_info {
+    margin-bottom: 0;
+    padding: 0;
+    margin-left: 0;
+    height: 100%;
+  }
+  .dropdown_menu {
+    display: flex;
+  }
+
   .toggle_btn {
     display: block;
+  }
+  .dropdown_menu {
+    display: flex;
+    z-index: 1;
   }
 }
