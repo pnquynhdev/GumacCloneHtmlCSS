@@ -1,12 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
-
-/* reset */
+@import "./vars.css";
+/*Lock*/ /* reset */
 * {
   margin: 0; /* base */
   padding: 0; /* base */
   box-sizing: border-box; /* base */
   font-family: "Josefin Sans", sans-serif; /* base */
-  position: relative;
+  max-width: 100vw; /*keep*/
+  max-height: 100vh; /*keep*/
 }
 
 html {

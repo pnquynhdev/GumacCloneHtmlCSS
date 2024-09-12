@@ -5,7 +5,7 @@ import { getImageUrl } from "../utils";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <header>
+    <>
       <nav>
         <div className={styles.navbar}>
           <a href="/home">
@@ -51,36 +51,36 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-
-        {/* DROPDOWN */}
-        <div
-          className={`${styles.dropdown_menu_close} ${
-            menuOpen && styles.dropdown_menu
-          }`}
-        >
-          <div className={styles.dropdown_searchbox}>
-            <input type="text" placeholder="Search product" />
-            <button>
-              <img
-                src={getImageUrl("navbar/search_icon.svg")}
-                alt="search_icon"
-              />
-            </button>
-          </div>
-          <ul className={styles.dropdown_links}>
-            <li>
-              <a href="/collection">Collection</a>
-            </li>
-            <li>
-              <a href="/product">Product</a>
-            </li>
-            <li>
-              <a href="/New">New</a>
-            </li>
-          </ul>
-        </div>
       </nav>
-    </header>
+
+      {/* DROPDOWN */}
+      <div
+        className={`${styles.dropdown_menu_close} ${
+          menuOpen && styles.dropdown_menu
+        }`}
+      >
+        <div className={styles.dropdown_searchbox}>
+          <input type="text" placeholder="Search product" />
+          <button>
+            <img
+              src={getImageUrl("navbar/search_icon.svg")}
+              alt="search_icon"
+            />
+          </button>
+        </div>
+        <ul className={styles.dropdown_links}>
+          <li>
+            <a href="/collection">Collection</a>
+          </li>
+          <li>
+            <a href="/product">Product</a>
+          </li>
+          <li>
+            <a href="/New">New</a>
+          </li>
+        </ul>
+      </div>
+    </>
   );
 };
 

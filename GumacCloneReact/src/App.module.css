@@ -1,20 +1,6 @@
 @import "./vars.css";
 
 .App {
-  width: 100%; /* base */
-  height: 100vh; /* base */
-  background-color: var(--color-bg);
-  display: flex;
-  flex-direction: column;
-}
-
-.App main {
-  margin: 0 6.5rem;
-  height: 100%;
-}
-
-@media screen and (max-width: 1200px) {
-  .App main {
-    margin:0 2.5rem;
-  }
+  height: 100%; /*vh-Default*/
+  width: 100%;
 }
