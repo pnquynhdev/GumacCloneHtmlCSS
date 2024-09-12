@@ -1,8 +1,8 @@
-import styles from "./Nav.module.css";
+import styles from "./Navbar.module.css";
 import React, { useState } from "react";
 import { getImageUrl } from "../utils";
 
-const Nav = () => {
+const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <header>
@@ -84,4 +84,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default Navbar;
