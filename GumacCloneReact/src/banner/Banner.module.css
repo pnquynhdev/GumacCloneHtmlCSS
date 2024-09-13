@@ -1,65 +1,120 @@
 @import "../vars.css";
 
 section {
-  position: relative;
   margin: 3.8rem 4rem 0;
   padding: 0 2.5rem;
-  width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .banner_container {
   display: flex;
-  gap: 5rem;
-  width: 700px;
+  gap: 1rem;
 }
 
 .advertise_cards {
   flex: 1;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.advertise_cards{
-    display: flex;
-    flex-direction: column;
-}
-.sale_prices{
-    display: flex;
-}
-.sale_prices img{
-    width: 5rem;
-    height: 2.5rem;
-}
-.voucher_codes{
-    display: flex;
-}
-.voucher_codes img{
-    width: 5rem;
-    height: 2rem;
-}
 .carousel {
   flex: 2;
-  height: 100%;
+  width: 100%;
+
 }
 
- .carousel_item img {
-    width: 50%;
-    height: 100%;
+.sale_prices {
+  display: flex;
+  flex:1;
 }
-.carousel_items{
-    position: relative;
-}
-.carousel_item {
+
+.sale_prices a img {
   height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.voucher_codes {
+  display: flex;
+  width: 100%;
+  flex: 1;
+}
+
+.voucher_wrapper{
+ 
+}
+
+.voucher_wrapper img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+
+}
+.voucher_content{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+/* .voucher_content {
+  background-image: url("../../assets/banner/voucher_code.png");
+  background-size: cover;
+  background-repeat: none;
+  color: #fff;
+  z-index: 1;
+  justify-content: center;
+  max-width: 27.4rem;
+  max-height: 8.7rem;
+  /* padding: 0.5rem 0.5rem 0.5rem 6rem; */
+/*}
+
+.voucher_content h1 {
+  display: -webkit-inline-box;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.5rem;
+  font-weight: 500;
+}
+.voucher_content p {
+  display: -webkit-inline-box;
+  font-size: 0.5rem;
+  font-weight: 400;
+}
+.voucher_content button {
+  padding: 0.2rem 0.5rem;
+  font-size: 0.5rem;
+  font-weight: 500;
+} */
+
+.carousel_items {
+  position: relative;
+}
+
+.carousel_item {
   display: none;
 }
 .carousel_item_selected {
   display: block;
 }
-.carousel_item_selected img{
-    width: 50%;
-    height: 100%;
+
+.carousel_item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
+
+.carousel_item_selected img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .carousel_slick_dots {
   width: 100%;
   position: absolute;
@@ -79,15 +134,13 @@ section {
 .carousel_slick_dots span.selected {
   background-color: var(--bs-secondary);
 }
-@media screen and (max-width: 992px), (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
   section {
     margin-right: 0;
     margin-left: 0;
   }
+
   .banner_container {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
-  /* .carousel {
-    flex: 1;
-  } */
 }

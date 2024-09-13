@@ -6,8 +6,7 @@
   padding: 0; /* base */
   box-sizing: border-box; /* base */
   font-family: "Josefin Sans", sans-serif; /* base */
-  max-width: 100vw; /*keep*/
-  max-height: 100vh; /*keep*/
+  position: relative;
 }
 
 html {
