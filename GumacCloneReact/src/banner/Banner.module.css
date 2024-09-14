@@ -24,37 +24,35 @@ section {
 
 .sale_prices {
   display: flex;
-  flex: 1;
   height: 100%;
 }
 
 .sale_prices a img {
   height: 100%;
   width: 100%;
-  object-fit: fill;
+  object-fit: contain;
 }
 
 .voucher_codes {
-  flex: 2;
   display: flex;
   gap: 1rem;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 0 2.5rem 0 0;
 }
-
 .voucher_code img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
 }
 .voucher_wrapper {
   padding: 1rem 0;
   width: 100%;
   display: flex;
   position: absolute;
-  top: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
 }
 .code {
   flex: 0.75;
@@ -88,11 +86,12 @@ section {
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
 }
 .carousel_items {
-  position: relative;
+  overflow: hidden;
+  display: flex;
 }
 
 .carousel_item {
-  display: none;
+  display: block;
 }
 .carousel_item_selected {
   display: block;
@@ -144,30 +143,38 @@ section {
   .voucher_code img {
     object-fit: scale-down;
   }
-}
-
-@media screen and (max-width: 800px) {
   .voucher_content h1,
   .voucher_content p,
   .voucher_content button {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
+}
 
+@media screen and (max-width: 922px) {
   .voucher_content h1,
   .voucher_content p,
   .voucher_content button {
     font-size: 0.75rem;
   }
-
   .voucher_wrapper {
     padding: initial;
+  }
+  .sale_prices {
+    margin: 0 0 1rem 0;
   }
 }
 
 @media screen and (max-width: 600px) {
+  .voucher_codes {
+    flex-direction: column;
+  }
+
+  .voucher_codes {
+    padding: 0 2.5rem;
+  }
   .voucher_content h1,
   .voucher_content p,
   .voucher_content button {
-    font-size: 0.52rem;
+    font-size: 1rem;
   }
 }
