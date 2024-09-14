@@ -3,8 +3,6 @@
 section {
   margin: 3.8rem 4rem 0;
   padding: 0 2.5rem;
-  height: 100%;
-  position: relative;
 }
 
 .banner_container {
@@ -16,82 +14,79 @@ section {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
 }
 
 .carousel {
   flex: 2;
   width: 100%;
-
+  height: 100%;
 }
 
 .sale_prices {
   display: flex;
-  flex:1;
+  flex: 1;
+  height: 100%;
 }
 
 .sale_prices a img {
   height: 100%;
   width: 100%;
-  object-fit: contain;
+  object-fit: fill;
 }
 
 .voucher_codes {
+  flex: 2;
   display: flex;
-  width: 100%;
-  flex: 1;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.voucher_wrapper{
- 
-}
-
-.voucher_wrapper img{
+.voucher_code img {
   width: 100%;
   height: 100%;
-  display: block;
   object-fit: contain;
-
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
 }
-.voucher_content{
+.voucher_wrapper {
+  padding: 1rem 0;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  top: 0;
+}
+.code {
+  flex: 0.75;
   width: 100%;
   height: 100%;
-  top: 0;
-  right: 0;
-  position: absolute;
+}
+.voucher_content {
+  flex: 2;
   display: flex;
   flex-direction: column;
-}
-/* .voucher_content {
-  background-image: url("../../assets/banner/voucher_code.png");
-  background-size: cover;
-  background-repeat: none;
-  color: #fff;
-  z-index: 1;
   justify-content: center;
-  max-width: 27.4rem;
-  max-height: 8.7rem;
-  /* padding: 0.5rem 0.5rem 0.5rem 6rem; */
-/*}
-
-.voucher_content h1 {
-  display: -webkit-inline-box;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 0.5rem;
+  align-items: center;
+}
+.voucher_content h1,
+.voucher_content button {
+  font-size: 1rem;
   font-weight: 500;
 }
 .voucher_content p {
-  display: -webkit-inline-box;
-  font-size: 0.5rem;
+  margin: 0.5rem 0;
+  font-size: 0.75rem;
   font-weight: 400;
 }
-.voucher_content button {
-  padding: 0.2rem 0.5rem;
-  font-size: 0.5rem;
-  font-weight: 500;
-} */
 
+.voucher_content button {
+  background-color: transparent;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+}
 .carousel_items {
   position: relative;
 }
@@ -142,5 +137,37 @@ section {
 
   .banner_container {
     flex-direction: column-reverse;
+  }
+  .voucher_codes {
+    flex-direction: row;
+  }
+  .voucher_code img {
+    object-fit: scale-down;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .voucher_content h1,
+  .voucher_content p,
+  .voucher_content button {
+    font-size: 1rem;
+  }
+
+  .voucher_content h1,
+  .voucher_content p,
+  .voucher_content button {
+    font-size: 0.75rem;
+  }
+
+  .voucher_wrapper {
+    padding: initial;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .voucher_content h1,
+  .voucher_content p,
+  .voucher_content button {
+    font-size: 0.52rem;
   }
 }

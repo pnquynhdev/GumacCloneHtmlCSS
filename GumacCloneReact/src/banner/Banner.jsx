@@ -20,21 +20,30 @@ const Banner = () => {
           </div>
 
           <div className={styles.voucher_codes}>
-            <div className={styles.voucher_wrapper}>
-            <img src={getImageUrl("banner/voucher_code.png")} alt="voucher_image" />
-            <div className={styles.voucher_content}>
-              <h1>VOUCHER 20k</h1>
-              <p>Giảm 20k cho đơn từ 350k</p>
-              <button>COPY MÃ</button>
+            <div className={styles.voucher_code}>
+              <img
+                src={getImageUrl("banner/voucher_code.png")}
+                alt="voucher_image"
+              />
+              <div className={styles.voucher_wrapper}>
+                <div className={styles.code}></div>
+              <div className={styles.voucher_content}>
+                <h1>VOUCHER 20k</h1>
+                <p>Giảm 20k cho đơn từ 350k</p>
+                <button>COPY MÃ</button>
+              </div></div>
             </div>
-            </div>
-            <div className={styles.voucher_wrapper}>
-            <img src={getImageUrl("banner/voucher_code.png")} alt="voucher_image" />
-            <div className={styles.voucher_content}>
-              <h1>VOUCHER 20k</h1>
-              <p>Giảm 20k cho đơn từ 350k</p>
-              <button>COPY MÃ</button>
-            </div>
+            <div className={styles.voucher_code}>
+              <img
+                src={getImageUrl("banner/voucher_code.png")}
+                alt="voucher_image"
+              /><div className={styles.voucher_wrapper}>
+                <div className={styles.code}></div>
+              <div className={styles.voucher_content}>
+                <h1>VOUCHER 20k</h1>
+                <p>Giảm 20k cho đơn từ 350k</p>
+                <button>COPY MÃ</button>{" "}
+              </div></div>
             </div>
           </div>
         </div>
