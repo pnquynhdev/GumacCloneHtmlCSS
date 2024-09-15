@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./Banner.module.css";
 import { getImageUrl } from "../utils";
 import { ChevronLeft, ChevronRight } from "react-feather";
 
 const Banner = () => {
   const [currentImg, setCurrentImg] = useState(0);
+  const [autoPlay, setAutoPlay] = useState(true);
+  let timeout = null;
   const carouselImgs = [
     {
       id: 0,
@@ -23,19 +25,25 @@ const Banner = () => {
     },
   ];
 
-  const prevImg = () => {
-    setCurrentImg((currentImg) =>
+  const goToPrevImg = () => {
+    setCurrentImg(() =>
       currentImg === 0 ? carouselImgs.length - 1 : currentImg - 1
     );
-    console.log(currentImg);
   };
 
-  const nextImg = () => {
-    setCurrentImg((currentImg) =>
+  const goToNextImg = () => {
+    setCurrentImg(() =>
       currentImg === carouselImgs.length - 1 ? 0 : currentImg + 1
     );
-    console.log(currentImg);
   };
+
+  useEffect(() => {
+    timeout =
+      autoPlay &&
+      setTimeout(() => {
+        goToNextImg();
+      }, 3500);
+  });
 
   return (
     <section>
@@ -84,39 +92,53 @@ const Banner = () => {
             </div>
           </div>
         </div>
-        <div className={styles.carousel}>
+        <div
+          className={styles.carousel}
+          onMouseEnter={() => {
+            setAutoPlay(false);
+            clearTimeout(imgInterval);
+          }}
+          onMouseLeave={() => {
+            setAutoPlay(true);
+          }}
+        >
           <div className={styles.carousel_items}>
-            {carouselImgs.map((carouselImg) => (
-              <div key={carouselImg.id} className={styles.carousel_item}>
+            {carouselImgs.map((carouselImg, i) => (
+              <div
+                key={carouselImg.id}
+                className={
+                  currentImg === i
+                    ? styles.carousel_item_selected
+                    : styles.carousel_item
+                }
+              >
                 <img
                   src={getImageUrl(carouselImg.link)}
                   alt={carouselImg.alt}
                 />
               </div>
             ))}
-            {/* <div className={styles.carousel_item_selected}>
-              <img
-                src={getImageUrl("banner/carousel_2.jpg")}
-                alt="carousel_2"
-              />
-            </div>
-            <div className={styles.carousel_item}>
-              <img
-                src={getImageUrl("banner/carousel_3.jpg")}
-                alt="carousel_3"
-              />
-            </div> */}
           </div>
-          <button className={styles.carousel_button} onClick={prevImg}>
-            <ChevronLeft />
+          <button className={styles.carousel_button_left} onClick={goToPrevImg}>
+            <ChevronLeft className={styles.left} />
           </button>
-          <button className={styles.carousel_button} onClick={nextImg}>
-            <ChevronRight />
+          <button
+            onClick={goToNextImg}
+            className={styles.carousel_button_right}
+          >
+            <ChevronRight className={styles.right} />
           </button>
           <div className={styles.carousel_slick_dots}>
-            <span></span>
-            <span className={styles.selected}></span>
-            <span></span>
+            {carouselImgs.map((carouselImg, i) => (
+              <span
+                key={carouselImg.id}
+                className={
+                  currentImg === i
+                    ? styles.slick_dot_selected
+                    : styles.slick_dot
+                }
+              ></span>
+            ))}
           </div>
         </div>
       </div>
