@@ -4,3 +4,7 @@
   height: 100%; /*vh-Default*/
   width: 100%;
 }
+
+main{
+  overflow: hidden;
+}

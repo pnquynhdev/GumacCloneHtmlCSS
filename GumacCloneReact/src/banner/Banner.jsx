@@ -62,12 +62,13 @@ const Banner = () => {
           </div>
 
           <div className={styles.voucher_codes}>
-            <div className={styles.voucher_code}>
+            <div className={styles.voucher_wrapper}>
               <img
                 src={getImageUrl("banner/voucher_code.png")}
                 alt="voucher_image"
               />
-              <div className={styles.voucher_wrapper}>
+
+              <div className={styles.voucher_code}>
                 <div className={styles.code}></div>
                 <div className={styles.voucher_content}>
                   <h1>VOUCHER 20k</h1>
@@ -76,12 +77,14 @@ const Banner = () => {
                 </div>
               </div>
             </div>
-            <div className={styles.voucher_code}>
+
+            <div className={styles.voucher_wrapper}>
               <img
                 src={getImageUrl("banner/voucher_code.png")}
                 alt="voucher_image"
               />
-              <div className={styles.voucher_wrapper}>
+
+              <div className={styles.voucher_code}>
                 <div className={styles.code}></div>
                 <div className={styles.voucher_content}>
                   <h1>VOUCHER 20k</h1>
@@ -120,13 +123,13 @@ const Banner = () => {
             ))}
           </div>
           <button className={styles.carousel_button_left} onClick={goToPrevImg}>
-            <ChevronLeft className={styles.left} />
+            <img src={getImageUrl("banner/left.svg")} alt="left_arrow" />
           </button>
           <button
             onClick={goToNextImg}
             className={styles.carousel_button_right}
           >
-            <ChevronRight className={styles.right} />
+            <img src={getImageUrl("banner/right.svg")} alt="right_arrow" />
           </button>
           <div className={styles.carousel_slick_dots}>
             {carouselImgs.map((carouselImg, i) => (
