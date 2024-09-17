@@ -1,8 +1,41 @@
 @import "../vars.css";
 
-aside {
-    z-index: 1;
-    position: fixed;
-    bottom: 10%;
-    right: 10%;
+.aside_menu {
+  z-index: 1;
+  position: fixed;
+  bottom: 5%;
+  right: 15%;
+  max-width: 50%;
+  max-height: 50%;
+  transform: translate(-15%, -5%);
+}
+.aside_item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.aside_text {
+  display: none;
+  flex: 10;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.aside_item img {
+  width: 4rem;
+  height: 4rem;
+  object-fit: contain;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+.aside_link:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.aside_link:hover + .aside_text {
+    display: block;
+}
+
+@media screen and (min-width: 992px) {
 }

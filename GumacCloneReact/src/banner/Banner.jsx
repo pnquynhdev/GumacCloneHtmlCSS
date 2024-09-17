@@ -42,7 +42,7 @@ const Banner = () => {
       autoPlay &&
       setTimeout(() => {
         goToNextImg();
-      }, 3500);
+      }, 10000);
   });
 
   return (
@@ -120,6 +120,7 @@ const Banner = () => {
                   alt={carouselImg.alt}
                 />
               </div>
+              
             ))}
           </div>
           <button className={styles.carousel_button_left} onClick={goToPrevImg}>
