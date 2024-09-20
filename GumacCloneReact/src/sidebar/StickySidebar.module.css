@@ -11,18 +11,11 @@
 }
 .aside_item {
   display: flex;
+  justify-content: right;
   align-items: center;
   gap: 1rem;
 }
-
-.aside_text {
-  display: none;
-  flex: 10;
-  font-size: 1rem;
-  font-weight: 400;
-}
-
-.aside_item img {
+.aside_link img {
   width: 4rem;
   height: 4rem;
   object-fit: contain;
@@ -33,8 +26,16 @@
 .aside_link:hover {
   background-color: rgba(0, 0, 0, 0.4);
 }
-.aside_link:hover + .aside_text {
-    display: block;
+
+.aside_text {
+  transform: scale(0);
+}
+.aside_item:hover .aside_text{
+  transform: scale(1);
+  flex: 10;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: right;
 }
 
 @media screen and (min-width: 992px) {

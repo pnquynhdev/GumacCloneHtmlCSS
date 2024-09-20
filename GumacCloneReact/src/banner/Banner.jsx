@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import styles from "./Banner.module.css";
 import { getImageUrl } from "../utils";
-import { ChevronLeft, ChevronRight } from "react-feather";
 
 const Banner = () => {
   const [currentImg, setCurrentImg] = useState(0);

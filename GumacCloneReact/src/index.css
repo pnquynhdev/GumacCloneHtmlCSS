@@ -7,6 +7,7 @@
   box-sizing: border-box; /* base */
   font-family: "Josefin Sans", sans-serif; /* base */
   position: relative;
+  font-size: 14px;
 }
 
 html {

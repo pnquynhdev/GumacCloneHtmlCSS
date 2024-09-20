@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { getImageUrl } from "../utils";
 import styles from "./StickySidebar.module.css";
 
@@ -29,6 +29,7 @@ const StickySidebar = () => {
       text: "Cart",
     },
   ];
+
   return (
     <ul className={styles.aside_menu}>
       {sidebarElements.map((element) => (
